@@ -24,6 +24,8 @@
 
 **技术栈：** Go、Gin、Gorm、MySQL、Redis、JWT、WebSocket、Vue3、TypeScript、Element Plus、ECharts、uni-app。
 
+**联系方式：** Telegram（飞机）[@cgydgzs](https://t.me/cgydgzs)
+
 本项目为商业软件源码，适用于授权范围内的二次开发、测试及合规部署。行情控制及 B-Book 机制属于平台运营控制功能，并非真实交易所行情或独立撮合市场。实际商业运营前须自行评估适用法律、金融监管及合规要求。
 
 **技术栈**：Go · Gin · Gorm · MySQL · Redis · JWT · WebSocket | Vue3 · Vite · Element Plus · Pinia · ECharts | uni-app（H5/App/小程序）
@@ -40,6 +42,7 @@
 - [快速启动](#快速启动)
 - [默认账号](#默认账号)
 - [内置文档](#内置文档)
+- [联系方式](#联系方式)
 - [License](#license)
 
 ---
@@ -325,6 +328,12 @@ pnpm dev
 | `后端访问有效期控制说明.md` | 访问有效期控制中间件（可按需移除） |
 | `宝塔部署文档.md` | 宝塔面板部署指南 |
 | `百万量级压测与部署文档.md` | 高并发压测与部署建议 |
+
+---
+
+## 联系方式
+
+- Telegram（飞机）：[@cgydgzs](https://t.me/cgydgzs)
 
 ---
 
