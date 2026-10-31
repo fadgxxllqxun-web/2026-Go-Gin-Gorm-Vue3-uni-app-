@@ -4,6 +4,8 @@
 
 一套完整的 Go 全栈微盘交易平台源码，采用前后端分离架构，一个 Go 后端统一驱动四个独立前端。
 
+![PC 交易端主界面](screenshots/pc/01-trading.png)
+
 **系统包含：**
 - 总管理后台：用户管理、权限管理、交易管理、资金管理、行情运营。
 - 代理商后台：客户管理、额度划拨、多级代理、手续费及分润结算。
@@ -31,6 +33,7 @@
 ## 目录
 
 - [功能一览](#功能一览)
+- [演示图片](#演示图片)
 - [核心交易引擎](#核心交易引擎)
 - [技术亮点](#技术亮点)
 - [项目结构](#项目结构)
@@ -99,6 +102,113 @@
 
 ---
 
+## 演示图片
+
+> 以下截图均来自实际运行环境，覆盖四端核心业务流程。点击图片可查看原图。
+
+### 总管理后台（ease-ui）
+
+<table>
+  <tr>
+    <td width="50%" align="center"><a href="screenshots/admin/01-dashboard.png"><img src="screenshots/admin/01-dashboard.png" width="100%"></a><br><sub>数据看板：平台核心指标、待办审核、最近订单与操作日志</sub></td>
+    <td width="50%" align="center"><a href="screenshots/admin/02-products.png"><img src="screenshots/admin/02-products.png" width="100%"></a><br><sub>品种管理：最小变动、保证金率、固定保证金、每手费、浮动量、手数范围</sub></td>
+  </tr>
+  <tr>
+    <td width="50%" align="center"><a href="screenshots/admin/03-users.png"><img src="screenshots/admin/03-users.png" width="100%"></a><br><sub>用户管理：实名状态、启用禁用、资金调整与删除</sub></td>
+    <td width="50%" align="center"><a href="screenshots/admin/04-orders.png"><img src="screenshots/admin/04-orders.png" width="100%"></a><br><sub>订单管理：全平台委托与成交、手续费、保证金、平仓盈亏</sub></td>
+  </tr>
+  <tr>
+    <td width="50%" align="center"><a href="screenshots/admin/05-positions.png"><img src="screenshots/admin/05-positions.png" width="100%"></a><br><sub>持仓管理：多空手数与浮动盈亏汇总、一键强制平仓</sub></td>
+    <td width="50%" align="center"><a href="screenshots/admin/06-funds-review.png"><img src="screenshots/admin/06-funds-review.png" width="100%"></a><br><sub>出入金管理：充值 / 提现审核、转账凭证查看</sub></td>
+  </tr>
+  <tr>
+    <td width="50%" align="center"><a href="screenshots/admin/07-fund-flow.png"><img src="screenshots/admin/07-fund-flow.png" width="100%"></a><br><sub>流水管理：全类型资金变动明细与收支 / 净流入汇总</sub></td>
+    <td width="50%" align="center"><a href="screenshots/admin/08-payment-addresses.png"><img src="screenshots/admin/08-payment-addresses.png" width="100%"></a><br><sub>收款地址管理：USDT / 银行卡地址、所属网络、启停与归零统计</sub></td>
+  </tr>
+  <tr>
+    <td width="50%" align="center"><a href="screenshots/admin/09-notifications.png"><img src="screenshots/admin/09-notifications.png" width="100%"></a><br><sub>通知管理：站内公告与交易、风控、出入金消息推送记录</sub></td>
+    <td width="50%" align="center"><a href="screenshots/admin/10-market-control.png"><img src="screenshots/admin/10-market-control.png" width="100%"></a><br><sub>控盘管理：交易时段、系统强平线、控盘策略与目标价 / 插针规则</sub></td>
+  </tr>
+  <tr>
+    <td width="50%" align="center"><a href="screenshots/admin/11-agents.png"><img src="screenshots/admin/11-agents.png" width="100%"></a><br><sub>代理商管理：多级代理、手续费 / 头寸分润比例、邀请码、可提现余额</sub></td>
+    <td width="50%" align="center"><a href="screenshots/admin/12-settings.png"><img src="screenshots/admin/12-settings.png" width="100%"></a><br><sub>系统设置：网站信息、OSS 存储、邮件、短信、交易与客服配置</sub></td>
+  </tr>
+  <tr>
+    <td width="50%" align="center"><a href="screenshots/admin/13-banners.png"><img src="screenshots/admin/13-banners.png" width="100%"></a><br><sub>Banner 管理：App 首页轮播图、跳转链接与排序</sub></td>
+    <td width="50%"></td>
+  </tr>
+</table>
+
+### 代理后台（agent-ui）
+
+<table>
+  <tr>
+    <td width="50%" align="center"><a href="screenshots/agent/01-dashboard.png"><img src="screenshots/agent/01-dashboard.png" width="100%"></a><br><sub>数据看板：名下用户、交易量、可提现分润、近 7 天订单趋势</sub></td>
+    <td width="50%" align="center"><a href="screenshots/agent/02-customers.png"><img src="screenshots/agent/02-customers.png" width="100%"></a><br><sub>名下用户：客户列表、实名状态、上分 / 下分与订单持仓入口</sub></td>
+  </tr>
+  <tr>
+    <td width="50%" align="center"><a href="screenshots/agent/03-customer-orders.png"><img src="screenshots/agent/03-customer-orders.png" width="100%"></a><br><sub>客户订单：按订单号 / 用户 / 状态筛选名下客户委托</sub></td>
+    <td width="50%" align="center"><a href="screenshots/agent/04-customer-positions.png"><img src="screenshots/agent/04-customer-positions.png" width="100%"></a><br><sub>客户持仓：持仓方向、手数、开仓价、保证金</sub></td>
+  </tr>
+  <tr>
+    <td width="50%" align="center"><a href="screenshots/agent/05-sub-agents.png"><img src="screenshots/agent/05-sub-agents.png" width="100%"></a><br><sub>下级代理：创建下级、层级、分润比例与当前额度</sub></td>
+    <td width="50%" align="center"><a href="screenshots/agent/06-promotion.png"><img src="screenshots/agent/06-promotion.png" width="100%"></a><br><sub>推广中心：专属邀请码、带参推广链接与注册二维码</sub></td>
+  </tr>
+  <tr>
+    <td width="50%" align="center"><a href="screenshots/agent/07-commission-flow.png"><img src="screenshots/agent/07-commission-flow.png" width="100%"></a><br><sub>分润流水：手续费分润、头寸分润逐笔明细</sub></td>
+    <td width="50%" align="center"><a href="screenshots/agent/08-withdrawals.png"><img src="screenshots/agent/08-withdrawals.png" width="100%"></a><br><sub>提现管理：分润余额提现申请与提现记录</sub></td>
+  </tr>
+  <tr>
+    <td width="50%" align="center"><a href="screenshots/agent/09-settings.png"><img src="screenshots/agent/09-settings.png" width="100%"></a><br><sub>个人设置：代理后台登录密码修改</sub></td>
+    <td width="50%"></td>
+  </tr>
+</table>
+
+### PC 用户交易端（client-pc-ui）
+
+![PC 交易大厅](screenshots/pc/01-trading.png)
+
+<sub>交易大厅：多品种行情、K 线与技术指标、五档盘口、下单面板、持仓 / 委托 / 成交</sub>
+
+<table>
+  <tr>
+    <td width="50%" align="center"><a href="screenshots/pc/02-funds.png"><img src="screenshots/pc/02-funds.png" width="100%"></a><br><sub>资金与账户：资产总览、资金流水、充值 / 提现 / 安全设置 / 联系代理</sub></td>
+    <td width="50%" align="center"><a href="screenshots/pc/03-login.png"><img src="screenshots/pc/03-login.png" width="100%"></a><br><sub>登录 / 注册：账号或邮箱登录，支持代理邀请码注册</sub></td>
+  </tr>
+</table>
+
+### 移动端用户端（uniapp）
+
+<table>
+  <tr>
+    <td width="25%" align="center"><a href="screenshots/h5/01-login.png"><img src="screenshots/h5/01-login.png" width="100%"></a><br><sub>登录</sub></td>
+    <td width="25%" align="center"><a href="screenshots/h5/02-register.png"><img src="screenshots/h5/02-register.png" width="100%"></a><br><sub>注册：邮箱验证码 + 代理邀请码</sub></td>
+    <td width="25%" align="center"><a href="screenshots/h5/03-home.png"><img src="screenshots/h5/03-home.png" width="100%"></a><br><sub>首页：轮播、快捷入口、公告、涨跌榜</sub></td>
+    <td width="25%" align="center"><a href="screenshots/h5/04-market-detail.png"><img src="screenshots/h5/04-market-detail.png" width="100%"></a><br><sub>行情详情：K 线、分时、最新成交</sub></td>
+  </tr>
+  <tr>
+    <td width="25%" align="center"><a href="screenshots/h5/05-trade.png"><img src="screenshots/h5/05-trade.png" width="100%"></a><br><sub>交易页：行情、K 线、盘口</sub></td>
+    <td width="25%" align="center"><a href="screenshots/h5/06-trade-order.png"><img src="screenshots/h5/06-trade-order.png" width="100%"></a><br><sub>下单面板：市价 / 限价、止盈止损、持仓 / 委托 / 历史</sub></td>
+    <td width="25%" align="center"><a href="screenshots/h5/07-profile.png"><img src="screenshots/h5/07-profile.png" width="100%"></a><br><sub>我的：资产总览、实名 / 安全、公告、联系代理</sub></td>
+    <td width="25%" align="center"><a href="screenshots/h5/08-account-info.png"><img src="screenshots/h5/08-account-info.png" width="100%"></a><br><sub>个人信息：账号、实名、资金密码、所属代理</sub></td>
+  </tr>
+  <tr>
+    <td width="25%" align="center"><a href="screenshots/h5/09-deposit.png"><img src="screenshots/h5/09-deposit.png" width="100%"></a><br><sub>充值申请：USDT 收款地址、转账凭证上传</sub></td>
+    <td width="25%" align="center"><a href="screenshots/h5/10-withdraw.png"><img src="screenshots/h5/10-withdraw.png" width="100%"></a><br><sub>出金申请：USDT / 银行卡、资金密码校验</sub></td>
+    <td width="25%" align="center"><a href="screenshots/h5/11-security.png"><img src="screenshots/h5/11-security.png" width="100%"></a><br><sub>安全设置：登录密码 / 资金密码修改</sub></td>
+    <td width="25%" align="center"><a href="screenshots/h5/12-fund-records.png"><img src="screenshots/h5/12-fund-records.png" width="100%"></a><br><sub>出入金记录：充值 / 提现记录查询</sub></td>
+  </tr>
+  <tr>
+    <td width="25%" align="center"><a href="screenshots/h5/13-notifications.png"><img src="screenshots/h5/13-notifications.png" width="100%"></a><br><sub>系统公告：成交、平仓、提现等消息</sub></td>
+    <td width="25%" align="center"><a href="screenshots/h5/14-contact-agent.png"><img src="screenshots/h5/14-contact-agent.png" width="100%"></a><br><sub>联系代理：电话、微信、QQ</sub></td>
+    <td width="25%"></td>
+    <td width="25%"></td>
+  </tr>
+</table>
+
+
+---
+
 ## 核心交易引擎
 
 后端按「行情引擎 / 撮合引擎 / 风控 / 定时结算」四个子系统组织，全部内存级实时计算，MySQL 做最终落盘：
@@ -130,6 +240,7 @@
 ├── agent-ui/        代理后台（Vue3 + Element Plus）
 ├── client-pc-ui/    PC 用户交易端（Vue3 + ECharts K线）
 ├── uniapp/          移动端用户交易端（uni-app，可打包 H5/App）
+├── screenshots/     四端界面截图（admin / agent / pc / h5）
 ├── 撮合交易规则.md     撮合模型说明（B-Book 系统承接）
 ├── 保证金与强平公式.md   保证金/手续费/盈亏/强平计算公式
 ├── 交易资金计算公式.md   资金计算规则
@@ -138,9 +249,6 @@
 ├── 百万量级压测与部署文档.md
 └── README.md
 ```
-
-## 演示图片
-
 
 ---
 
